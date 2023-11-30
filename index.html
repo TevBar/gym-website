@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.html">
+    <link rel="stylesheet" href="signin.html">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>FLEX&GO
+            <nav>
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="about.html">About page </a></li>
+                    <li><a href="signin.html">Sign up</a></li>
+                </ul>
+            </nav>
+        </h1>
+    </header>
+
+    <section id="home">
+        <h1>Flex&go</h1>
+        <p>Today we will begin YOUR fitness journey</p>
+        <button onclick="showClasses()">View Classes</button>
+    </section>
+
+    <section id="classes" class="hidden">
+        <h1>Classes</h1>
+        <p>Check out The classes we have for you!</p><br>
+        <button onclick ="showSchedule()">view schedule</button>
+        <ul>
+            <li>Cycling class</li>
+            <li>Yoga</li>
+            <li>Palates</li>
+            <li>Free room</li>
+            <li>Strength training</li>
+        </ul>
+        
+    </section>
+
+    <section id="scehdule">
+        <h1>Class Schedules</h1>
+        <table>
+            <tr>
+                <td>Cycling class</td>
+                <td>Mondays and wednesdays</td>
+                <td>3:00PM</td>
+            </tr>
+            <tr>
+                <td>Yoga</td>
+                <td>Tuesday and thursday</td>
+                <td>12:00PM</td>
+            </tr>
+            <tr>
+                <td>Palates</td>
+                <td>Monday - Friday</td>
+                <td>10:00AM</td>
+            </tr>
+            <tr>
+                <td>Free Room</td>
+                <td>Sunday - Saturday</td>
+                <td>3:00PM-6:00PM</td>
+            </tr>
+            <tr>
+                <td>Strength Training</td>
+                <td>Thursday and Friday</td>
+                <td>5:00PM</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Us below!</h1>
+        <p>place our information below, so we can reach you</p>
+        <form action="#">
+            <label for="Name">Name</label>
+            <input type="text" id="name" name="name" required><br>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+
+            <label for="message">Write message here</label>
+            <textarea name="Message" id="message" cols="30" rows="10"></textarea>
+
+            <button type = "submit">Send Message</button>
+        </form>
+    </section>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .image {
+            width: calc(33.33% - 10px); /* Adjust width based on the number of columns */
+            margin-bottom: 20px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+
+    <div class="container">
+        <div class="image">
+            <img src="images/photo-1534438327276-14e5300c3a48.avif"Gym Workout 1">
+        </div>
+        <div class="image">
+            <img src="images/image-1-1024x683.webp" alt="Gym Workout 2">
+        </div>
+        <div class="image">
+            <img src="images/1200x800.jpeg" alt="Gym Workout 3">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Flex&go. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
